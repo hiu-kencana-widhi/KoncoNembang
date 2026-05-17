@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{{ config('app.name', 'KoncoNembang') }}</title>
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark-mode');
+        } else {
+            document.documentElement.classList.remove('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <script>
+        // Synchronize body class on the absolute earliest moment to prevent flash
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+    <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; width: 100%; padding: 20px; background-color: var(--bg-main); transition: background-color 0.2s ease;">
+        <div class="guest-container">
+            <a href="/" class="guest-logo" style="display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 24px; transition: transform 0.2s ease;">
+                <img src="{{ asset('image/Logo-KoncoNembang.png') }}" alt="KoncoNembang Logo" style="height: 64px; width: auto; object-fit: contain;">
+                <span style="font-weight: 800; font-size: 1.6rem; color: var(--text-main); letter-spacing: -0.75px;">KoncoNembang</span>
+            </a>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div>
-
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+            <div class="guest-card">
                 {{ $slot }}
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
