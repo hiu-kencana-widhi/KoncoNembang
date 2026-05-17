@@ -236,29 +236,18 @@ Berikut adalah visualisasi alur operasional utama platform **KoncoNembang**:
 <div align="center">
 
 ## 📸 GALERI ANTARMUKA & CUPLIKAN LAYAR
-Dokumentasi visual keindahan antarmuka pemutar musik daerah modern KoncoNembang.
+Dokumentasi visual keindahan antarmuka platform streaming musik modern KoncoNembang.
 
 </div>
 
 <br>
 
-### 🖥️ Cuplikan Antarmuka Halaman Utama & Pemutar
-*Visualisasi Landing Page premium, dasbor pemutar musik presisi tengah, dan panel kontrol admin terpadu.*
+### 🖥️ Cuplikan Antarmuka Dasbor Publik Utama
+*Pratinjau visual halaman beranda utama (public landing dashboard) KoncoNembang yang dikembangkan secara premium dan responsif.*
 
-#### 1. Landing Page Publik Modern (Mode Terang)
-![Landing Page Light](public/image/readme/public/landing_light.png)
-
-#### 2. Landing Page Publik Modern (Mode Gelap)
-![Landing Page Dark](public/image/readme/public/landing_dark.png)
-
-#### 3. Dasbor Player Utama Centered (Mode Gelap)
-![Player Dark](public/image/readme/player/player_dark.png)
-
-#### 4. Dasbor Player Utama Centered (Mode Terang)
-![Player Light](public/image/readme/player/player_light.png)
-
-#### 5. Dasbor Manajemen Admin (Manajemen Lagu & Kategori)
-![Admin Dashboard](public/image/readme/admin/dashboard.png)
+<div align="center">
+  <img src="public/image/readme/cuplikan-web.png" alt="Cuplikan Antarmuka KoncoNembang" width="100%"/>
+</div>
 
 ---
 
